@@ -1,0 +1,21 @@
+# 核心
+Django>=4.2,<5.0
+psycopg2-binary>=2.9.9         # PostgreSQL DB Driver（若用 MySQL 改為 mysqlclient）
+python-dotenv>=1.0.1           # 管理 .env 檔
+
+# 前端支援（如 Bootstrap 整合）
+django-crispy-forms>=2.1
+
+# 開發與除錯
+ipython                        # 更好的 shell 體驗（可選）
+django-debug-toolbar>=4.3.0   # 開發時用的除錯工具
+
+# API 擴充（可選）
+djangorestframework>=3.15.1
+
+# 匯出報表（可選）
+pandas>=2.2.2
+openpyxl>=3.1.2
+
+# 時區與時間管理（可選）
+pytz
