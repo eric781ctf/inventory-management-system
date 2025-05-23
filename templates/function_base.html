@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}功能頁{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .sidebar {
+      height: 100vh;
+      background-color: #f8f9fa;
+      padding-top: 2rem;
+    }
+    .sidebar .btn {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- 左側功能表 -->
+    <div class="col-md-3 sidebar">
+      <div class="d-grid gap-2 px-3">
+        <a href="{% url 'dashboard' %}" class="btn btn-outline-primary">📊 Dashboard</a>
+        <a href="{% url 'inbound' %}" class="btn btn-outline-success">📦 入庫</a>
+        <a href="{% url 'outbound' %}" class="btn btn-outline-danger">📤 出庫</a>
+      </div>
+    </div>
+
+    <!-- 右側內容 -->
+    <div class="col-md-9 p-4">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
